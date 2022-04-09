@@ -9,7 +9,7 @@
   <p align="center"> Check the latest available statistics presented in many formats with data from covid-19 API
     <br/>
     <br/>
-    <a href="https://nodemagic.herokuapp.com/">View Demo</a>
+    <a href="https://covid-updater-app.herokuapp.com/">View Demo</a>
     .
   </p>
 </p>
