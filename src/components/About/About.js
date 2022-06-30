@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography,Box,Card, CardActions,CardContent, Button,Link} from '@mui/material'
-import image from '../Images/medic.svg'
+import image from '../images/medic.svg'
 
 
 export default function About() {
