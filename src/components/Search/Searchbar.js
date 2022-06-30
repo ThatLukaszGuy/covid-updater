@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {StatsOptions} from "../axios";
+import {StatsOptions} from "../../axios";
 import axios from 'axios'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';

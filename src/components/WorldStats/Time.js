@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { WorldOptions } from '../axios';
+import { WorldOptions } from '../../axios';
 import axios from 'axios'
-import image from './images/calendar.svg'
 import { Typography } from '@mui/material';
 
 

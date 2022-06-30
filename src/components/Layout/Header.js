@@ -10,7 +10,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import Link from '@mui/material/Link'
+import Link from '@mui/material/Link';
+
 
 export default function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,7 +35,7 @@ export default function Header() {
 
   
   }}>
-      <Container  maxWidth='xl'>
+      <Container  >
         <Toolbar disableGutters sx={{display:'flex' , justifyContent: 'space-between'}}>
           <Typography
             variant="h6"

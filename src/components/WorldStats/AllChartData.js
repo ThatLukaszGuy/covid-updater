@@ -1,18 +1,30 @@
 import React from 'react'
-import {Chart as ChartJS, BarElement,CategoryScale,LinearScale} from 'chart.js'
+import {
+    Chart as ChartJS, 
+    BarElement,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    Title,
+    Tooltip,
+    Legend,} from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import {useEffect, useState} from 'react'
-import { WorldOptions } from '../axios';
+import { WorldOptions } from '../../axios';
 import axios from 'axios'
 import { Typography } from '@mui/material';
 
 ChartJS.register(
     CategoryScale,
     BarElement,
-    LinearScale
+    LinearScale,
+    PointElement,
+    Title,
+    Tooltip,
+    Legend,
 )
 
-export default function ChartData() {
+export default function AllChartData() {
     
     const [chart, setChart] = useState([])
 
@@ -31,24 +43,22 @@ export default function ChartData() {
 
 
     const data = {
-        labels: ['new cases','critical', 'new deaths'],
+        labels: ['total cases','total deaths', 'total tests'],
         datasets: [{
             label: '# of Votes',
             data: [
-                chart?.cases?.new,
-                chart?.cases?.critical,
-                chart?.deaths?.new,
+                chart?.cases?.total,
+                chart?.deaths?.total,
+                chart?.tests?.total,
 
             ],
             backgroundColor: [
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 99, 132, 0.2)'
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
             ],
             borderColor: [
-                'rgba(75, 192, 192, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)'
+                'rgba(255, 205, 86, 1)',
+                'rgba(153, 102, 255, 1)',
             ],
             borderWidth: 1
         }]
@@ -85,10 +95,10 @@ export default function ChartData() {
                 {chart?.cases?
                    <div>
                        <Typography color='primary.main' sx={{marginTop: '15px'}}>
-                        All active cases: {chart.cases.active} <br/>
-                        New cases: {chart.cases.new} <br/>
-                        Critical: {chart.cases.critical} <br/>
-                        New deaths: {chart.deaths.new} 
+                        Total cases: {chart.cases.total} <br/>
+                        Total deaths: {chart.deaths.total} <br/>
+                        Total Tests: {chart.tests.total ? chart.tests.total : 'Unable to fetch.'} <br/>
+
                        </Typography>
                    </div>
  
