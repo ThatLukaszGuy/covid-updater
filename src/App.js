@@ -9,7 +9,6 @@ import About from './components/About/About';
 import Footer from './components/Layout/Footer';
 
 
-
 function App() {
 
 
@@ -17,18 +16,20 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
 
-      
+
         <Header />
+
+         
           <Container>
-            
             <div id='world'></div>     
             <WorldStats/>
             <div id='search'></div>
             <Search />
             <div id='about'></div>
             <About/>
-          </Container>
+          
           <Footer />
+        </Container>
       </ThemeProvider>
     </>
   );

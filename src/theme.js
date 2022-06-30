@@ -21,6 +21,7 @@ function pxToRem(value) {
 const theme = createTheme({
   
   palette: {
+  
     primary: {
       main: blueGrey[500]
     },
@@ -34,6 +35,9 @@ const theme = createTheme({
       main: teal[500]
     }
   },
+
+
+
   typography: {
     fontFamily: ['Public Sans, sans-serif'].join(''),
     fontWeightRegular: 400,

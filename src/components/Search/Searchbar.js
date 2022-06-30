@@ -10,6 +10,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Container } from "@mui/material";
 
 export default function Searchbar() {
     const [data, setData] = useState([])
@@ -73,13 +74,13 @@ export default function Searchbar() {
                       
 
 
-
-        <Box sx={{ width:'70vw' }}>
+        <Container >
+        <Box sx={{ width: '100%'}}>
 
             
             {selectedCountry ?
 
-                <div >        
+                <div style={{ }}>        
                     
                     <Typography variant='h6' color='secondary' sx={{marginBottom: '10px'}}>{selectedCountry.country}</Typography>
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -145,12 +146,13 @@ export default function Searchbar() {
                     
 
                 </div>
-
+               
 
                 : <Typography variant='h6' color='secondary' textAlign='center'> Awaiting input ... </Typography>
             }
+           
         </Box>
-            
+        </Container>
             
         
 

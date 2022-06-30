@@ -45,7 +45,7 @@ export default function AllChartData() {
     const data = {
         labels: ['total cases','total deaths', 'total tests'],
         datasets: [{
-            label: '# of Votes',
+            label: '# of Recorded',
             data: [
                 chart?.cases?.total,
                 chart?.deaths?.total,
