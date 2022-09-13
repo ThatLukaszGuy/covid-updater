@@ -43,13 +43,12 @@ export default function AllChartData() {
 
 
     const data = {
-        labels: ['total cases','total deaths', 'total tests'],
+        labels: ['total cases','total deaths'],
         datasets: [{
             label: '# of Recorded',
             data: [
                 chart?.cases?.total,
                 chart?.deaths?.total,
-                chart?.tests?.total,
 
             ],
             backgroundColor: [
@@ -97,8 +96,6 @@ export default function AllChartData() {
                        <Typography color='primary.main' sx={{marginTop: '15px'}}>
                         Total cases: {chart.cases.total} <br/>
                         Total deaths: {chart.deaths.total} <br/>
-                        Total Tests: {chart.tests.total ? chart.tests.total : 'Unable to fetch.'} <br/>
-
                        </Typography>
                    </div>
  

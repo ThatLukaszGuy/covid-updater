@@ -82,7 +82,7 @@ export default function ChartData() {
   
   
   return (
-    <div style={{display:'flex', flexDirection: 'column'}}>    
+    <div style={{display:'flex', flexDirection: 'column', flexWrap: 'wrap'}}>    
         <div style={{height: '50vh' , width: '50vw'}}>
             <Bar 
                 height={500}

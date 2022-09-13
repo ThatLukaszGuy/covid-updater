@@ -28,8 +28,8 @@ function App() {
             <div id='about'></div>
             <About/>
           
-          <Footer />
-        </Container>
+            <Footer />
+          </Container>
       </ThemeProvider>
     </>
   );

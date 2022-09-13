@@ -20,10 +20,10 @@ export default function Time() {
   
   
   return (
-    <div style={{display: 'flex', flexDirection: 'column' ,height: '50vh' , width: '50vw'}}>    
+    <div style={{display: 'flex', flexDirection: 'column' ,height: '50vh' , width: '50vw', flexWrap: 'wrap'}}>    
 
             <Typography color='primary.main' > 
-            Data fetched on: 
+            Todays Data fetched on: 
             {data? `  ${data.day}` : 'loading'} <br/> 
             Full date: 
             {data? `  ${data.time}` : 'loading'}

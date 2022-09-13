@@ -29,7 +29,7 @@
 
 ## About The Project
 
-![Screen Shot](assets/world.png)![Screen Shot](assets/search.png)![Screen Shot](assets/about.png)
+![Screen Shot](assets/world.png)![Screen Shot](assets/search.png)![Screen Shot](assets/about.png)![Screen Shot](assets/historical.png)
 
 This Website allows users to access the newewst statistics provided by the Covid-19 API.
 For the entire world the data gets dynamically visualized and is displayed in form of a bar chart. You can also search for specific countries and get all necessary information 

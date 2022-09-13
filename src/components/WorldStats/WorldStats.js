@@ -8,6 +8,7 @@ import ChartData from './ChartData';
 import AllChartData from './AllChartData';
 import Time from './Time';
 import {useState} from 'react'
+import { Historical } from './Historical';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -63,7 +64,7 @@ export default function WorldStats() {
 
       <Typography variant='h3' color='primary'>World Data </Typography>
       <Box
-        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: {xs: '75vh', md:'70vh'}, borderRadius: '20px', boxShadow: 3, marginTop:'10px' }}
+        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', minHeight: {xs: '75vh', md:'70vh'}, borderRadius: '20px', boxShadow: 3, marginTop:'10px' }}
         
         color='secondary'
       >
@@ -78,9 +79,10 @@ export default function WorldStats() {
           aria-label="Vertical tabs example"
           sx={{ borderRight: 1, borderColor: 'divider' ,bgcolor: 'rgba(144,164,174,0.5)', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px'}}
         >
-          <Tab label="New Data" {...a11yProps(0)} />
-          <Tab label="All Data" {...a11yProps(1)} />
-          <Tab label="Day & time" {...a11yProps(2)} />
+          <Tab label="Today" {...a11yProps(0)} />
+          <Tab label="All Time" {...a11yProps(1)} />
+          <Tab label="Historical" {...a11yProps(2)} />
+          <Tab label="Exact date" {...a11yProps(3)} />
 
         </Tabs>
         <TabPanel value={value} index={0} >
@@ -90,6 +92,10 @@ export default function WorldStats() {
             <AllChartData />
         </TabPanel>
         <TabPanel value={value} index={2}>
+            <Historical />
+
+        </TabPanel>
+        <TabPanel value={value} index={3}>
             <Time />
 
         </TabPanel>
